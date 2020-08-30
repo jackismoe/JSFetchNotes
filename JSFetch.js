@@ -28,10 +28,22 @@ const getDataPromise = (number) => new Promise((resolve, reject) => {
 //   // => 8
 //   // => (Takes 4 seconds)
 
-fetch('https://api.github.com/orgs/nodejs')
+// // fetch GET
+// fetch('https://api.github.com/orgs/nodejs')
+//   .then((response) => {
+//     return response.json()
+//   })
+//   .then((jsonResponse) => {
+//     console.log(jsonResponse)
+//   }) // see markDown for break down of this fetch
+
+// fetch POST
+let newData = "Hello"
+
+fetch("localhost:3000", {
+  method: 'POST',
+  body: JSON.stringify(newData)
+})
   .then((response) => {
-    return response.json()
+    console.log(response)
   })
-  .then((jsonResponse) => {
-    console.log(jsonResponse)
-  }) // see markDown for break down of this fetch
