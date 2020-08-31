@@ -7,35 +7,35 @@ const getDataPromise = (number) => new Promise((resolve, reject) => {
   }, 2000)
 })
 
-// console.log(getDataPromise(65))
-//   // => result: 130
-//   // => status: 'resolved'
+console.log(getDataPromise(65))
+  // => result: 130
+  // => status: 'resolved'
 
-// getDataPromise(2)
-//   .then((data) => {
-//     console.log(data)
-//   })
-//   // => 4
-//   // (Takes 2 seconds)
+getDataPromise(2)
+  .then((data) => {
+    console.log(data)
+  })
+  // => 4
+  // (Takes 2 seconds)
 
-// getDataPromise(2)
-//   .then((data) => {
-//     getDataPromise(data)
-//       .then((data2) => {
-//         console.log(data2)
-//       })
-//   })
-//   // => 8
-//   // => (Takes 4 seconds)
+getDataPromise(2)
+  .then((data) => {
+    getDataPromise(data)
+      .then((data2) => {
+        console.log(data2)
+      })
+  })
+  // => 8
+  // => (Takes 4 seconds)
 
-// // fetch GET
-// fetch('https://api.github.com/orgs/nodejs')
-//   .then((response) => {
-//     return response.json()
-//   })
-//   .then((jsonResponse) => {
-//     console.log(jsonResponse)
-//   }) // see markDown for break down of this fetch
+// fetch GET
+fetch('https://api.github.com/orgs/nodejs')
+  .then((response) => {
+    return response.json()
+  })
+  .then((jsonResponse) => {
+    console.log(jsonResponse)
+  }) // see markDown for break down of this fetch
 
 // fetch POST
 let newData = "Hello"
