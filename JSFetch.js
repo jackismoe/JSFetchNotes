@@ -8,9 +8,10 @@ const getDataPromise = (number) => new Promise((resolve, reject) => {
 })
 
 console.log(getDataPromise(65))
-  // => result: 130
-  // => status: 'resolved'
-
+  // => Promise {status: "pending"}
+    // => result: 130
+    // => status: 'resolved'
+ 
 getDataPromise(2)
   .then((data) => {
     console.log(data)
@@ -40,7 +41,7 @@ fetch('https://api.github.com/orgs/nodejs')
 // fetch POST
 let newData = "Hello"
 
-fetch("localhost:3000", {
+fetch("https://localhost:3000", {
   method: 'POST',
   body: JSON.stringify(newData)
 })
